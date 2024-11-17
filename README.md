@@ -31,6 +31,3 @@ Este projeto implementa a soma de dois vetores utilizando a tecnologia CUDA, apr
 
 ## Como funciona
 Este código realiza a soma de dois vetores de forma paralela utilizando as capacidades da GPU. Ele pode ser adaptado para trabalhar com vetores de diferentes tamanhos e tipos de dados.
-
-## Licença
-Este projeto está licenciado sob a [Licença MIT](LICENSE).
