@@ -1,7 +1,6 @@
 #include <iostream>
 #include <cuda_runtime.h>
 
-// Função de verificação de erro CUDA
 inline void checkCudaError(const char* msg) {
     cudaError_t err = cudaGetLastError();
     if (err != cudaSuccess) {
@@ -18,9 +17,9 @@ __global__ void vectorAdd(int *a, int *b, int *c, int N) {
 }
 
 int main() {
-    int N = 10000;  // Tamanho dos vetores
-    int *a, *b, *c;  // Vetores de entrada e saída
-    int *d_a, *d_b, *d_c;  // Ponteiros para a memória da GPU
+    int N = 10000;  
+    int *a, *b, *c;  
+    int *d_a, *d_b, *d_c;  
 
     // Aloca memória para os vetores no host
     a = new int[N];
@@ -69,7 +68,6 @@ int main() {
 	}
 
 
-    // Verifica o resultado
     for (int i = 0; i < N; ++i) {
         if (c[i] != a[i] + b[i]) {
             std::cout << "Erro no calculo! Indice: " << i << std::endl;
