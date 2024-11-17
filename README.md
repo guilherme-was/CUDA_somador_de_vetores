@@ -29,5 +29,24 @@ Este projeto implementa a soma de dois vetores utilizando a tecnologia CUDA, apr
     ./somador
     ```
 
+## Executar no Linux
+1. Realizar a instalação do CUDA compativel com a GPU
+```bash
+    sudo apt update
+    sudo apt install nvidia-cuda-toolkit
+```
+Verificar versão do CUDA instalado:
+```
+    nvcc --version
+```
+2. Compile o código CUDA usando o seguinte comando:
+```
+    nvcc -o somador vector_add_cuda.cu
+```
+3. Após a compilação, execute o programa gerado:
+```
+    ./somador
+```
+
 ## Como funciona
 Este código realiza a soma de dois vetores de forma paralela utilizando as capacidades da GPU. Ele pode ser adaptado para trabalhar com vetores de diferentes tamanhos e tipos de dados.
